@@ -954,7 +954,8 @@ function RayfieldLibrary:Notify(data) -- action e.g open messages
 		newNotification.Shadow.ImageTransparency = 1
 		newNotification.Size = UDim2.new(1, 0, 0, 800)
 		newNotification.Icon.ImageTransparency = 1
-		newNotification.Icon.BackgroundTransparency = 1
+  		newNotification.Icon.BackgroundTransparency = 1
+                newNotification.Title.RichText = true
 
 		task.wait()
 
@@ -1482,6 +1483,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
+        Topbar.Title.RichText = true
 
 	Main.Size = UDim2.new(0, 420, 0, 100)
 	Main.Visible = true
@@ -1849,6 +1851,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		local TabButton = TabList.Template:Clone()
 		TabButton.Name = Name
 		TabButton.Title.Text = Name
+                TabButton.Title.RichText = true
 		TabButton.Parent = TabList
 		TabButton.Title.TextWrapped = false
 		TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 30, 0, 30)
